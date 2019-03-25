@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String description = etDescription.getText().toString();
                 ParseUser user = ParseUser.getCurrentUser();
+                Log.d(TAG, "Submit button clicked");
                 if(photoFile == null || ivPostImage.getDrawable() == null) {
                     Log.e(TAG, "No photo to submit");
                     Toast.makeText(MainActivity.this, "There is no photo!", Toast.LENGTH_LONG).show();
@@ -165,9 +166,11 @@ public class MainActivity extends AppCompatActivity {
         post.setDescription(description);
         post.setUser(user);
         post.setImage(new ParseFile(photoFile));
+        Log.d(TAG, "Going to save in background now");
         post.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
+                Log.d(TAG, "In done method");
                 if(e != null) {
                     Log.d(TAG, "Error while saving");
                     return;
