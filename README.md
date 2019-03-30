@@ -83,7 +83,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## License
 
-    Copyright [1995] [Claudia Bandali]
+    Copyright [2019] [Claudia Bandali]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
