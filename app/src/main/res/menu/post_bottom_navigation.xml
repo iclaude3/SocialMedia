@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/like"
+        android:icon="@drawable/ufi_heart"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/comment"
+        android:icon="@drawable/ufi_comment"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/message"
+        android:icon="@drawable/ufi_new_direct"
+        app:showAsAction="always" />
+</menu>

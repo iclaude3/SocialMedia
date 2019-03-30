@@ -35,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         btnSignUp = findViewById(R.id.btnSignUp);
 
+        if(isUserLoggedIn()) goMainActivity();
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +56,15 @@ public class LoginActivity extends AppCompatActivity {
                 signUp(username, password);
             }
         });
+    }
+
+    private boolean isUserLoggedIn() {
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if(currentUser != null){
+            Log.d(TAG, "User is still logged in");
+            return true;
+        }
+        return false;
     }
 
     private void signUp(final String username, final String password) {
